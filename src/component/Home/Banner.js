@@ -2,7 +2,7 @@ import React from 'react';
 
 const Banner = () => {
   const bannerData = [
-    { percentage: '100%', label: 'Happy Client' },
+    { percentage: '98%', label: 'Happy Client' },
     { percentage: '100%', label: 'Project Success' },
     { percentage: '24/7', label: 'Customer Support' },
     { percentage: '1+', label: 'Years of Experience' },

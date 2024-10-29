@@ -9,27 +9,27 @@ import img3 from "../../../../assets/img3.png";
 import img4 from "../../../../assets/img4.png";
 import { useNavigate } from 'react-router-dom';
 
-const SoftwareDevelopment = () => {const navigate = useNavigate(); // Use useHistory for v5
+const SoftwareDevelopment = () => {const navigate = useNavigate(); 
 
   const handleNavigation = (item) => {
     switch (item) {
       case "Cyber Security":
-        navigate("/cyber-security"); // Adjust the path as needed
+        navigate("/cyber-security"); 
         break;
       case "Cloud Computing":
         navigate("/cloud-computing");
         break;
       case "UI/UX":
-        navigate("/ui-ux-graphics");
+        navigate("/ui-ux-graphics-graphics");
         break;
       case "Web Development":
-        navigate("/web-development");
+        navigate("/website-development");
         break;
       case "Graphic Designing":
         navigate("/3d-animation");
         break;
       case "App Development":
-        navigate("/app-development");
+        navigate("/application-development");
         break;
       case "3D Animation":
           navigate("/3d-animation");

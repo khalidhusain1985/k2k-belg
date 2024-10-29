@@ -7,27 +7,57 @@ import img from "../../../../assets/img1.png";
 import img2 from "../../../../assets/img2.png";
 import img3 from "../../../../assets/img3.png";
 import img4 from "../../../../assets/img4.png";
+import { useNavigate } from 'react-router-dom';
 
-const SoftwareDevelopment = () => {
+const SoftwareDevelopment = () => {const navigate = useNavigate(); // Use useHistory for v5
+
+  const handleNavigation = (item) => {
+    switch (item) {
+      case "Cyber Security":
+        navigate("/cyber-security"); // Adjust the path as needed
+        break;
+      case "Cloud Computing":
+        navigate("/cloud-computing");
+        break;
+      case "UI/UX":
+        navigate("/ui-ux-graphics");
+        break;
+      case "Web Development":
+        navigate("/web-development");
+        break;
+      case "Graphic Designing":
+        navigate("/3d-animation");
+        break;
+      case "App Development":
+        navigate("/app-development");
+        break;
+      case "3D Animation":
+          navigate("/3d-animation");
+      break;
+      default:
+        navigate("/"); // Fallback route
+    }
+  };
   return (
     <div className="mx-5 md:mx-10 py-10 gap-5 md:py-20 flex flex-col-reverse md:flex-row">
       <div className="flex-1 md:w-[60%]">
-        <div className="bg-[#002366] lg:w-[60%] mx-5 md:mx-0 text-[#002366] rounded-2xl">
-          {[
-            "Cyber Security",
-            "Cloud Computing",
-            "UI/UX",
-            "Web Development",
-            "Graphic Designing",
-            "App Development",
-          ].map((item, index) => (
-            <div key={index} className="py-3 flex justify-center cursor-pointer">
-              <div className="bg-white py-1 flex px-3 gap-5 rounded-lg h-10 w-[90%]">
-                {item} <img className="h-auto" alt="" src={arrow4} />
-              </div>
-            </div>
-          ))}
+      <div className="bg-[#002366] lg:w-[60%] mx-5 md:mx-0 text-[#002366] rounded-2xl">
+      {[
+        "Cyber Security",
+        "Cloud Computing",
+        "UI/UX",
+        "Web Development",
+        "Graphic Designing",
+        "App Development",
+        "3D Animation",
+      ].map((item, index) => (
+        <div key={index} className="py-3 flex justify-center cursor-pointer" onClick={() => handleNavigation(item)}>
+          <div className="bg-white py-1 flex px-3 gap-5 rounded-lg h-10 w-[90%]">
+            {item} <img className="h-auto" alt="" src={arrow4} />
+          </div>
         </div>
+      ))}
+    </div>
 
         <div className="py-10">
           <div
@@ -44,7 +74,7 @@ const SoftwareDevelopment = () => {
                 <img src={phone} alt="" />
               </div>
               <div className="text-[12px] py-5">
-                <h2>Have Any Questions?</h2> +32467762470
+                <h2>Have Any Questions?</h2> +91 7045 724 027
               </div>
             </div>
           </div>
@@ -106,11 +136,11 @@ const SoftwareDevelopment = () => {
               }}
             >
               <p className="w-[80%] mx-auto">
-              Post Code 2930, Street Bredabaan 859, Belgium
+                Office No. 205, 2nd floor, Shree Amar heights, Plot no. E 10 & 33 DCM Ajmer Road, 302006, Jaipur
               </p>
               <br />
               <p className="mx-auto w-[80%]">
-                Phone: <span className="text-[#EC9422]">+32467762470</span> Email: <span className="text-[#EC9422]">info@k2kitsupport.com</span>
+                Phone: <span className="text-[#EC9422]">+91 7045 724 027</span> Email: <span className="text-[#EC9422]">marketingmanager@k2kitsupport.com</span>
               </p>
             </div>
           </div>
@@ -125,11 +155,10 @@ const SoftwareDevelopment = () => {
           </p>
           <span className="text-[#EC9422]">We transform your ideas, needs, thoughts, and suggestions into realism.</span>
           <p className="py-5">
-          Our expertise team excels in software development services, creating custom, scalable solutions tailored to your business needs.
           </p>
           <img src={img} alt="" className="w-full rounded-lg" />
           <h3 className="py-5 text-[35px] font-bold">K2K Agency Values</h3>
-          <p>At K2K, our culture comes to life through three core values:</p>
+          <p>At K2K, our culture comes to life through following values:</p>
           <ul className="list-disc list-inside">
             <li className="py-2">From Vision to Execution, We Code Your Success</li>
             <li className="py-2">Your Vision, Our Code—Limitless Possibilities…</li>
@@ -143,8 +172,7 @@ const SoftwareDevelopment = () => {
           </div>
 
           <p className="py-2">
-          We deliver industry-based innovative, high-performance software that drives efficiency, enhances user experience, and accelerates growth.
-
+          Our modernized unique software ideas surely fascinate you. Our hardworking technical experts deliver pleasing results at your doorsteps.
           </p>
           
 

@@ -8,27 +8,58 @@ import img2 from "../../../../assets/img2.png";
 import img3 from "../../../../assets/img3.png";
 import img4 from "../../../../assets/img4.png";
 import circle from "../../../../assets/circle1.png";
+import { useNavigate } from 'react-router-dom';
 
 const Aiengineering = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (item) => {
+    switch (item) {
+      case "Cyber Security":
+        navigate("/cyber-security"); 
+        break;
+      case "Cloud Computing":
+        navigate("/cloud-computing");
+        break;
+      case "UI/UX":
+        navigate("/ui-ux-graphics");
+        break;
+      case "Web Development":
+        navigate("/web-development");
+        break;
+      case "Graphic Designing":
+        navigate("/3d-animation");
+        break;
+      case "App Development":
+        navigate("/app-development");
+        break;
+      case "3D Animation":
+          navigate("/3d-animation");
+      break;
+      default:
+        navigate("/"); 
+    }
+  };
   return (
     <div className="mx-5 md:mx-10 py-10 gap-5 md:py-20 flex flex-col-reverse md:flex-row">
       <div className="flex-1 md:w-[60%]">
-        <div className="bg-[#002366] lg:w-[60%] mx-5 md:mx-0 text-[#002366] rounded-2xl">
-          {[
-            "Cyber Security",
-            "Cloud Computing",
-            "UI/UX",
-            "Web Development",
-            "Graphic Designing",
-            "App Development",
-          ].map((item, index) => (
-            <div key={index} className="py-3 flex justify-center cursor-pointer">
-              <div className="bg-white py-1 flex px-3 gap-5 rounded-lg h-10 w-[90%]">
-                {item} <img className="h-auto" alt="" src={arrow4} />
-              </div>
-            </div>
-          ))}
+      <div className="bg-[#002366] lg:w-[60%] mx-5 md:mx-0 text-[#002366] rounded-2xl">
+      {[
+        "Cyber Security",
+        "Cloud Computing",
+        "UI/UX",
+        "Web Development",
+        "Graphic Designing",
+        "App Development",
+        "3D Animation",
+      ].map((item, index) => (
+        <div key={index} className="py-3 flex justify-center cursor-pointer" onClick={() => handleNavigation(item)}>
+          <div className="bg-white py-1 flex px-3 gap-5 rounded-lg h-10 w-[90%]">
+            {item} <img className="h-auto" alt="" src={arrow4} />
+          </div>
         </div>
+      ))}
+    </div>
 
         <div className="py-10">
           <div
@@ -111,7 +142,7 @@ const Aiengineering = () => {
               </p>
               <br />
               <p className="mx-auto w-[80%]">
-                Phone: <span className="text-[#EC9422]">+91 7045 724 027</span> Email: <span className="text-[#EC9422]">info@k2kitsupport.com</span>
+                Phone: <span className="text-[#EC9422]">+91 7045 724 027</span> Email: <span className="text-[#EC9422]">marketingmanager@k2kitsupport.com</span>
               </p>
             </div>
           </div>
@@ -128,7 +159,7 @@ const Aiengineering = () => {
           
           <img src={img} alt="" className="w-full rounded-lg" />
           <h3 className="py-5 text-[35px] font-bold">K2K Agency Values</h3>
-          <p>At K2K, our culture comes to life through three core values:</p>
+          <p>At K2K, our culture comes to life through following values:</p>
           <ul className="list-disc list-inside">
             <li className="py-2">Data Analysis</li>
             <li className="py-2">Machine Learning Models </li>
